@@ -2,4 +2,10 @@
     <h1>Counter - With NgRx</h1>
     <app-counter-output-ngrx></app-counter-output-ngrx>
     <app-counter-buttons-ngrx></app-counter-buttons-ngrx>
+
+    <section class="field-container">
+        <p-inputNumber [(ngModel)]="incrementByValue" [step]="1"></p-inputNumber>
+        <button pButton type="button" label="Increment By" class="p-button-warning" (click)="incrementBy()"></button>
+    </section>
+
 </div>

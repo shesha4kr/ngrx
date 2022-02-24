@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+//Primeng Modules
 import { ButtonModule } from 'primeng/button';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { CounterButtonsNgrxComponent } from './counter-ngrx/counter-buttons-ngrx
 import { CounterOutputNgrxComponent } from './counter-ngrx/counter-output-ngrx/counter-output-ngrx.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter-ngrx/counter.reducer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { counterReducer } from './counter-ngrx/counter.reducer';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
+    InputNumberModule,
     RouterModule,
+    FormsModule,
     StoreModule.forRoot({ nanana: counterReducer })
   ],
   providers: [],

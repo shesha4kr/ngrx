@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { incrementByValue } from '../counter.action';
 
 @Component({
   selector: 'app-counter-ngrx',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterNgrxComponent implements OnInit {
 
-  constructor() { }
+  incrementByValue = 0;
+  size = 1;
+
+  constructor(private store: Store<any>) { }
 
   ngOnInit(): void {
+  }
+
+  incrementBy() {
+    this.store.dispatch(incrementByValue({ value: this.incrementByValue }));
   }
 
 }
