@@ -9,6 +9,11 @@ import { CounterButtonsComponent } from './counter-simple/counter-buttons/counte
 import { CounterOutputComponent } from './counter-simple/counter-output/counter-output.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { CounterNgrxComponent } from './counter-ngrx/counter-ngrx/counter-ngrx.component';
+import { CounterButtonsNgrxComponent } from './counter-ngrx/counter-buttons-ngrx/counter-buttons-ngrx.component';
+import { CounterOutputNgrxComponent } from './counter-ngrx/counter-output-ngrx/counter-output-ngrx.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter-ngrx/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,17 @@ import { RouterModule } from '@angular/router';
     CounterComponent,
     CounterButtonsComponent,
     CounterOutputComponent,
-    HomeComponent
+    HomeComponent,
+    CounterNgrxComponent,
+    CounterButtonsNgrxComponent,
+    CounterOutputNgrxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    RouterModule
+    RouterModule,
+    StoreModule.forRoot({ nanana: counterReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

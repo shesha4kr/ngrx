@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   counter() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/counter', 'ngrx']);
 
   }
 
