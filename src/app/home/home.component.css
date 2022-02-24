@@ -1,0 +1,16 @@
+.link {
+    font-size: 30px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    text-align: left;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 45px;
+}
