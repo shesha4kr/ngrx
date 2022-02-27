@@ -1,5 +1,5 @@
 export interface CounterState {
-    counter: number
+    counter: number,
 }
 
 export const intitialCounter: CounterState = { counter: 0 };

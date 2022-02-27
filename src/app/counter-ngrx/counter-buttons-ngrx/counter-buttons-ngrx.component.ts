@@ -8,12 +8,9 @@ import { CounterState } from '../counter.state';
   templateUrl: './counter-buttons-ngrx.component.html',
   styleUrls: ['./counter-buttons-ngrx.component.css']
 })
-export class CounterButtonsNgrxComponent implements OnInit {
+export class CounterButtonsNgrxComponent {
 
-  constructor(private store: Store<{ nanana: CounterState }>) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private store: Store<any>) { }
 
   increment() {
     this.store.dispatch(incrementCounter());
@@ -26,5 +23,4 @@ export class CounterButtonsNgrxComponent implements OnInit {
   reset() {
     this.store.dispatch(resetCounter());
   }
-
 }
